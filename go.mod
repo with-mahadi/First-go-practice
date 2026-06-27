@@ -1,3 +1,3 @@
-module example.com/m/v2
+module example.com
 
 go 1.26.4

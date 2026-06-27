@@ -1,13 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
+	"example.com/functions"
+)
+
+/*
+	1. For custom package use another folder should run this command
+	2. go mod init example.com
+*/
 func main() {
-	num1, num2, logic := getUserInput()
-	value := calculation(num1, num2, logic)
-	user_name := getUserName()
+	// num1, num2, logic := getUserInput()
+	// value := mathlib.Calculation(num1, num2, logic)
+	// user_name := getUserName()
 	
-	fmt.Println(user_name, "Your calculation result is::", value)
+	// fmt.Println(user_name, "Your calculation result is::", value)
+
+	fmt.Println("Execute the higher order function")
+	functions.LowerFn()
 }
 
 func getUserInput() (int, int, string) {
@@ -30,18 +41,4 @@ func getUserName() string {
 	fmt.Println("Enter your name here::")
 	fmt.Scanln(&name)
 	return name
-}
-func calculation(num1, num2 int, logic string) int {
-	switch logic {
-		case "sum":
-			return  num1 + num2
-		case "sub":
-			return num1 - num2
-		case "mul":
-			return num1 * num2
-		case "div": 
-			return num1 / num2
-		default: 
-			return num1 + num2		
-	}
 }
