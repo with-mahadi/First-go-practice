@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"example.com/functions"
+	"example.com/closure"
 )
 
 /*
@@ -17,8 +17,9 @@ func main() {
 	
 	// fmt.Println(user_name, "Your calculation result is::", value)
 
-	fmt.Println("Execute the higher order function")
-	functions.LowerFn()
+	// fmt.Println("Execute the higher order function")
+	// functions.LowerFn()
+	closure.FirstFn()
 }
 
 func getUserInput() (int, int, string) {
